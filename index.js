@@ -4,6 +4,8 @@ const app = express();
 const { Pool } = require('pg');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+require('dotenv').config();
+
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(morgan('dev'));
@@ -11,7 +13,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 const pool = new Pool({
-    connectionString: 'YOUR_ELEPHANTSQL_CONNECTION_STRING',
+    connectionString: process.env.ELEPHANTSQL_URL,
   });
 
 pool.connect((err, client, done) => {
