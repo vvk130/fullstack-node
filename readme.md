@@ -8,10 +8,10 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ## Technologies Used
 
-Javascript
-Node.js
-PostgreSQL
-React
+- Javascript
+- Node.js
+- PostgreSQL
+- React
 
 ## Database structure
 
