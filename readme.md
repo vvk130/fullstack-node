@@ -55,4 +55,4 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 - **GET /users/{id}**: Retrieve a specific user by their ID.
 - **POST /users**: Create a new user.
 - **PUT /users/{id}**: Update an existing user.
-~- **DELETE /users/{id}**: Delete a user by their ID.~
+- ~**DELETE /users/{id}**: Delete a user by their ID.~
