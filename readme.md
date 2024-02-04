@@ -17,6 +17,5 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ![alt text](https://github.com/vvk130/fullstack-node/blob/main/readme_assets/database_final.png)
 
-## Database structure2
+## Backend HTTP Methods
 
-![alt text](https://github.com/vvk130/fullstack-node/blob/main/readme_assets/database_final.png)
