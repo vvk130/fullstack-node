@@ -1,0 +1,78 @@
+title E-Commerce Database Schema
+
+// define tables
+order_items [icon: clipboard]{
+  id int pk
+  order_id int
+  product_id int
+  created_at timestamp
+  modified_at timestamp
+}
+
+order_details [icon: file-text]{
+  id int pk
+  order_id int
+  user_id string
+  total decimal
+  payment_id int
+  created_at timestamp
+  modified_at timestamp
+}
+
+product [icon: package]{
+  id int pk
+  name string
+  description text
+  SKU string
+  price decimal
+  image_url text
+  stock int
+  discount_id int
+  created_at timestamp
+  modified_at timestamp
+}
+
+discount [icon: percent]{
+  id int pk
+  name string
+  description text
+  discount_percent decimal
+  created_at timestamp
+  modified_at timestamp
+}
+
+cart_item [icon: shopping-cart]{
+  id int pk
+  session_id int
+  product_id int
+  quantity int
+  created_at timestamp
+  modified_at timestamp
+}
+
+shopping_session [icon: shopping-bag]{
+  id int pk
+  user_id string
+  total decimal
+  created_at timestamp
+  modified_at timestamp
+}
+
+user [icon: user]{
+  id int pk
+  username string
+  user_role enum
+  password text
+  first_name string
+  last_name string
+}
+
+Eraser ERD:
+// Relationships
+order_items.order_id > order_details.id
+product.id > cart_item.product_id
+product.discount_id > discount.id
+order_items.product_id > product.id
+order_details.user_id > user.id
+cart_item.session_id > shopping_session.id
+
