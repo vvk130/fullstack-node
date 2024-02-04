@@ -4,7 +4,6 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ## List of Contents
 
-- [Database Structure - Part 2](#database-structure-part-2)
 - [Technologies Used](#technologies-used)
 - [Database structure](#database-structure)
 - [List of HTTPS Methods](#list-of-https-methods)
