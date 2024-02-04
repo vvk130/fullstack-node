@@ -4,7 +4,7 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ## List of Contents
 
-[link](doc:fullstack-node#database-structure2)
+[Database Structure - Part 2](#database-structure2)
 
 ## Database structure
 
