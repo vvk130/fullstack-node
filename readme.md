@@ -4,4 +4,4 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ## Database structure
 
-![alt text](https://trend-flare.onrender.com/assets/mens-white-hoodie-removebg-preview-FPZPilwL.png)
+![alt text]()
