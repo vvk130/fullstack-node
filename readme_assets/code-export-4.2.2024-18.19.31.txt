@@ -1,4 +1,5 @@
 title E-Commerce Database Schema
+// done with eraser.io
 
 // define tables
 order_items [icon: clipboard]{
