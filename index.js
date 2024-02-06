@@ -3,6 +3,9 @@ const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+app.use(express.static(path.join(__dirname, 'dist')));
+app.use(morgan('dev'));
+app.use(bodyParser.json());
 
 const productRoutes = require('./api/routes/product');
 // const userRoutes = require('./api/routes/user');
@@ -12,29 +15,11 @@ const productRoutes = require('./api/routes/product');
 
 app.use('/api/products', productRoutes);
 // app.use('/api/user', userRoutes);
-//app.use('/api/orders', orderRoutes);
+// app.use('/api/orders', orderRoutes);
 // app.use('/api/discount', discountRoutes);
 // app.use('/api/shoppingCart', shoppingCartRoutes);
 
 module.exports = app; 
-
-app.use(express.static(path.join(__dirname, 'dist')));
-app.use(morgan('dev'));
-app.use(bodyParser.json());
-
-app.get('/', (req,res) => {
-    res.send("Homepage")
-});
-
-app.get("/api", (req, res) => {
-    res.send("API");
-});
-
-app.get("/items/:item_id", (req, res) => {
-    const item_id = parseInt(req.params.item_id);
-    const q = req.query.q || null;
-    res.json({ item_id, q });
-});
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
