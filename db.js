@@ -8,8 +8,4 @@ const pool = new Pool({
 
 console.log("Database running");
 
-(async () => {
-  const { rows } = await pool.query('SELECT * FROM product')
-  console.log(rows);
-})();
-
+module.exports = { pool };
