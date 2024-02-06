@@ -18,7 +18,7 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ## Database structure
 
-![alt text](https://github.com/vvk130/fullstack-node/blob/main/readme_assets/database_final2.png)
+![alt text](https://github.com/vvk130/fullstack-node/blob/main/models/database_final2.png)
 
 ## List of HTTPS Methods
 
