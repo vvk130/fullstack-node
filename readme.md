@@ -12,7 +12,7 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 - Javascript
 - Node.js
-- PostgreSQL
+- PostgreSQL (database pooling)
 - React
 - Material UI Components / Own components
 

@@ -14,6 +14,7 @@ pool.on('error', (err, client) => {
   process.exit(-1);
 });
 
+
 console.log("Database running");
 
 module.exports = { pool };
