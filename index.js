@@ -12,7 +12,7 @@ const apiRoutes = ['product', 'user', 'discount', 'order', 'shoppingcart'];
 
 apiRoutes.forEach(route => {
     const router = require(`./api/routes/${route}`);
-    app.use(`/api/${route}s`, router);
+    app.use(`/api/get${route}s`, router);
 });
 
 app.use(express.static(path.join(__dirname, 'dist')));

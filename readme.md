@@ -13,7 +13,7 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 - Javascript
 - Node.js
 - PostgreSQL (database pooling)
-- React
+- React.js
 - Material UI Components / Own components
 
 ## Database structure
