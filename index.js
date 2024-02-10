@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 const { notFoundHandler, errorHandler } = require('./middleware');
 const routes = require('./routes');
 
-const apiRoutes = ['product', 'user', 'discount', 'order', 'shoppingcart'];
+const apiRoutes = ['product', 'user', 'discount', 'order'];
 
 apiRoutes.forEach(route => {
     const router = require(`./api/routes/${route}`);
