@@ -35,8 +35,8 @@ cart_item [icon: shopping-cart]{
 
 user [icon: user]{
   id int pk
-  username string
   user_role enum
+  email string
   password text
   first_name string
   last_name string

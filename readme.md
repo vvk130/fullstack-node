@@ -37,11 +37,7 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 - **DELETE /orders/{id}**: Delete an order by its ID.
 
 ### Discounts
-- **GET /discounts**: Retrieve a list of all discounts.
-- **GET /discounts/{id}**: Retrieve a specific discount by its ID.
-- **POST /discounts**: Create a new discount.
-- **PUT /discounts/{id}**: Update an existing discount.
-- **DELETE /discounts/{id}**: Delete a discount by its ID.
+- **GET /api/getdiscounts**: Retrieve a list of all products with discounts.
 
 ### Shopping Carts
 - **GET /carts**: Retrieve a list of all shopping carts.
@@ -56,3 +52,15 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 - **POST /users**: Create a new user.
 - **PUT /users/{id}**: Update an existing user.
 - ~**DELETE /users/{id}**: Delete a user by their ID.~
+
+## Self-evaluation, things project is missing, TODOs
+
+- Project was not SEO optimized, as it was not the main goal of this project. (url names, links structure, sitemap, metadescriptions, robots.txt, possibly soft 404 (?)) 
+- Some components that were used only one time, and were still placed in the components folder (could be placed in pages folder)
+- Components could have been built to be more reusable 
+- API call code was too verbose
+- Files could have todo in them if they were not finished, to ensure better control over the tasks in progress
+- CSS was sometimes placed in a file, sometimes as style={{}}. More unified approach would have been great.
+- Testing was missing from the projects
+- No caching in the project
++ Error handling was on place
