@@ -15,6 +15,14 @@ apiRoutes.forEach(route => {
     app.use(`/api/get${route}s`, router);
 });
 
+app.get('/robots.txt', (req, res) => {
+    res.sendFile(path.join(__dirname, 'robots.txt'));
+});
+
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(routes);
 app.use(notFoundHandler);

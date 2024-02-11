@@ -10,16 +10,6 @@ order_items [icon: clipboard]{
   modified_at timestamp
 }
 
-order_details [icon: file-text]{
-  id int pk
-  order_id int
-  user_id string
-  total decimal
-  payment_id int
-  created_at timestamp
-  modified_at timestamp
-}
-
 product [icon: package]{
   id int pk
   name string
@@ -28,16 +18,7 @@ product [icon: package]{
   price decimal
   image_url text
   stock int
-  discount_id int
-  created_at timestamp
-  modified_at timestamp
-}
-
-discount [icon: percent]{
-  id int pk
-  name string
-  description text
-  discount_percent decimal
+  discount decimal
   created_at timestamp
   modified_at timestamp
 }
@@ -47,14 +28,6 @@ cart_item [icon: shopping-cart]{
   session_id int
   product_id int
   quantity int
-  created_at timestamp
-  modified_at timestamp
-}
-
-shopping_session [icon: shopping-bag]{
-  id int pk
-  user_id string
-  total decimal
   created_at timestamp
   modified_at timestamp
 }
@@ -72,8 +45,5 @@ Eraser ERD:
 // Relationships
 order_items.order_id > order_details.id
 product.id > cart_item.product_id
-product.discount_id > discount.id
 order_items.product_id > product.id
-order_details.user_id > user.id
-cart_item.session_id > shopping_session.id
 
