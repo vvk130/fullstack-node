@@ -18,6 +18,7 @@
     "multer": "^1.4.5-lts.1",
     "pg": "^8.11.3",
     "sequelize": "^6.36.0",
+    "sitemap": "^7.1.1",
     "watch": "^0.13.0"
   },
   "devDependencies": {

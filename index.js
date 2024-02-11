@@ -8,20 +8,21 @@ app.use(bodyParser.json());
 const { notFoundHandler, errorHandler } = require('./middleware');
 const routes = require('./routes');
 
-const apiRoutes = ['product', 'user', 'discount', 'order'];
+const apiRoutes = ['product'];
+// TODO add 'cart', , 'user', 'discount', 'order'
 
 apiRoutes.forEach(route => {
     const router = require(`./api/routes/${route}`);
     app.use(`/api/get${route}s`, router);
 });
 
-app.get('/robots.txt', (req, res) => {
-    res.sendFile(path.join(__dirname, 'robots.txt'));
-});
+// app.get('/robots.txt', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'robots.txt'));
+// });
 
-app.get('/sitemap.xml', (req, res) => {
-    res.sendFile(path.join(__dirname, 'sitemap.xml'));
-});
+// app.get('/sitemap.xml', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'sitemap.xml'));
+// });
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(routes);

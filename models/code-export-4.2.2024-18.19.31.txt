@@ -4,6 +4,7 @@ title E-Commerce Database Schema
 // define tables
 order_items [icon: clipboard]{
   id int pk
+  user_id int
   order_id int
   product_id int
   created_at timestamp
@@ -43,7 +44,6 @@ user [icon: user]{
 
 Eraser ERD:
 // Relationships
-order_items.order_id > order_details.id
 product.id > cart_item.product_id
 order_items.product_id > product.id
-
+order_items.user_id > user.id
