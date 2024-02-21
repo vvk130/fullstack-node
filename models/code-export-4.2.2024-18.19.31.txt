@@ -20,6 +20,7 @@ product [icon: package]{
   image_url text
   stock int
   discount decimal
+  category enum
   created_at timestamp
   modified_at timestamp
 }
@@ -37,7 +38,8 @@ user [icon: user]{
   id int pk
   user_role enum
   email string
-  password text
+  password_salted_hash text
+  image_url string
   first_name string
   last_name string
 }

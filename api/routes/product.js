@@ -12,6 +12,36 @@ router.get('/', async (req, res, next) => {
     }
 });
 
+router.get('/women', async (req, res, next) => {
+    try {
+        const { rows } = await pool.query("SELECT * FROM product WHERE maincategory = 'women'");
+        res.status(200).json(rows);
+    } catch (error) {
+        console.error('Error executing query:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+router.get('/men', async (req, res, next) => {
+    try {
+        const { rows } = await pool.query("SELECT * FROM product WHERE maincategory = 'men'");
+        res.status(200).json(rows);
+    } catch (error) {
+        console.error('Error executing query:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+router.get('/children', async (req, res, next) => {
+    try {
+        const { rows } = await pool.query("SELECT * FROM product WHERE maincategory = 'children'");
+        res.status(200).json(rows);
+    } catch (error) {
+        console.error('Error executing query:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 //ProductByBrand
 // router.get('/:brand', async (req, res, next) => {
 //     try {

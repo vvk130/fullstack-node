@@ -4,7 +4,7 @@ const { pool } = require('../../db');
 
 router.get('/', async (req, res, next) => {
     try {
-        const { rows } = await pool.query('SELECT * FROM product WHERE discount IS NOT NULL');
+        const { rows } = await pool.query('SELECT * FROM cart');
         res.status(200).json(rows); 
     } catch (error) {
         console.error('Error executing query:', error);
