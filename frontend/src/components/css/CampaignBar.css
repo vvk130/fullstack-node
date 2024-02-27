@@ -1,0 +1,21 @@
+.campaign-bar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+.campaign-text {
+  animation: opacityPulse 2s ease-out;
+  animation-iteration-count: infinite; 
+  opacity: 1;
+}
