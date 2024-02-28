@@ -12,11 +12,16 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ## How to run project locally
 
+Clone the reporitory
 ```
-function test() {
-  console.log("This code will have a copy button to the right of it");
-}
+git clone https://github.com/vvk130/fullstack-node.git
 ```
+
+Run nodemon:
+```
+nodemon
+```
+The application should run on port 3005
 
 ## Technologies Used
 
