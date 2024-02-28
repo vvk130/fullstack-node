@@ -6,10 +6,10 @@ https://github.com/vvk130/fullstack-node/assets/80620628/fbeff452-b3f3-4253-87ba
 
 ## List of Contents
 
-- How to run project locally 
+- [How to run project locally](#how-to-run-project-locally)
 - [Technologies Used](#technologies-used)
 - [Database structure](#database-structure)
-- Folder Structure
+- [Folder Structure](#folder-structure)
 - [List of HTTPS Methods](#list-of-https-methods)
 
 ## How to run project locally
