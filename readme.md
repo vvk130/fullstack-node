@@ -66,5 +66,15 @@ git clone https://github.com/vvk130/fullstack-node.git
 
 ## Folder Structure
 
-#todo
+### Backend:
+- **Models**: database models
+- **Utils**: commonly used functions
+- **Dist**: build frontend and assets
+- **Api**: api endpoints
 
+### Frontend/src: 
+- **Assets**
+- **Components**
+- **Pages**
+- **Routing**
+- **Utils**
