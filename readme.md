@@ -40,18 +40,9 @@ git clone https://github.com/vvk130/fullstack-node.git
 - **GET /api/getproducts/{id}**: Retrieve a specific product by its ID.
 - **GET /api/getbrands/{brand}**: Retrieve a list of products by brandname.
 
-### Orders
-
-- **GET /orders**: Retrieve a list of all orders.
-- **GET /orders/{id}**: Retrieve a specific order by its ID.
-
 ### Discounts
 
 - **GET /api/getdiscounts**: Retrieve a list of all products with discounts.
-
-### Users
-
-- **GET /users**: Retrieve a list of all users.
 
 ## Folder Structure
 
