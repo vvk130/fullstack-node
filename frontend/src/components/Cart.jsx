@@ -1,5 +1,5 @@
 import CartItem from "./CartItem";
-import './css/Cart.css'; 
+import "./css/Cart.css";
 
 function ShoppingCart() {
   const itemsInCart = 1;
@@ -9,10 +9,10 @@ function ShoppingCart() {
     <>
       <p></p>
       <hr className="hrdashed" />
-      < CartItem />
-      < CartItem />
+      <CartItem />
+      <CartItem />
       <p>Items in Cart: {itemsInCart}</p>
-      <p>Total sum: {total}€</p>    
+      <p>Total sum: {total}€</p>
     </>
   );
 }

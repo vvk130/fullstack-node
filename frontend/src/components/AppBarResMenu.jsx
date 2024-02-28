@@ -1,19 +1,19 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-const pages = ['Home', 'Men', 'Women', 'Children', 'Cart'];
-const settings = ['Profile', 'Logout'];
+const pages = ["Home", "Men", "Women", "Children", "Cart"];
+const settings = ["Profile", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -38,25 +38,38 @@ function ResponsiveAppBar() {
   const totalSum = 1000;
 
   return (
-    <AppBar style={{ borderBottom: '1px black solid', position: 'fixed' , boxShadow: 'none', backgroundColor: 'white', color: 'black', width: '100%', top: 0, left: 0, right: 0, margin: 0, padding: 0 }}>
+    <AppBar
+      style={{
+        borderBottom: "1px black solid",
+        position: "fixed",
+        boxShadow: "none",
+        backgroundColor: "white",
+        color: "black",
+        width: "100%",
+        top: 0,
+        left: 0,
+        right: 0,
+        margin: 0,
+        padding: 0,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-
-          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
             <Typography
               variant="h6"
               noWrap
-              component='a'
+              component="a"
               href="/"
               sx={{
                 mr: 2,
-                fontFamily: 'monospace',
+                fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
               }}
-            > 
+            >
               TrendFlare
             </Typography>
           </Box>
@@ -65,8 +78,8 @@ function ResponsiveAppBar() {
           <Box
             sx={{
               flexGrow: 0,
-              display: { xs: 'none', md: 'flex' },
-              justifyContent: 'flex-end',
+              display: { xs: "none", md: "flex" },
+              justifyContent: "flex-end",
             }}
           >
             <Tooltip title={`Total: ${totalSum}`}>
@@ -74,7 +87,7 @@ function ResponsiveAppBar() {
                 size="large"
                 color="inherit"
                 sx={{ mr: 1 }}
-                component='a'
+                component="a"
                 href="/Cart"
               >
                 <ShoppingCartIcon />
@@ -85,8 +98,8 @@ function ResponsiveAppBar() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: 'flex', md: 'none' },
-              justifyContent: 'flex-end',
+              display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
             }}
           >
             <IconButton
@@ -103,23 +116,25 @@ function ResponsiveAppBar() {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" component='a' href={`${page}`}>{page}</Typography>
+                  <Typography textAlign="center" component="a" href={`${page}`}>
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -129,23 +144,29 @@ function ResponsiveAppBar() {
           <Box
             sx={{
               flexGrow: 0,
-              display: { xs: 'none', md: 'flex' },
-              justifyContent: 'flex-end',
+              display: { xs: "none", md: "flex" },
+              justifyContent: "flex-end",
             }}
           >
-            {pages.map((page) => (
-              page !== 'Cart' &&
-              (<Typography
-                key="{page}"
-                component='a'
-                href={`/${page}`}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', paddingRight: '1rem' }}
-              >
-                {page}
-              </Typography>
-            )
-            ))}
+            {pages.map(
+              (page) =>
+                page !== "Cart" && (
+                  <Typography
+                    key="{page}"
+                    component="a"
+                    href={`/${page}`}
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      my: 2,
+                      color: "black",
+                      display: "block",
+                      paddingRight: "1rem",
+                    }}
+                  >
+                    {page}
+                  </Typography>
+                )
+            )}
           </Box>
 
           {/* User Avatar and Settings Menu */}
@@ -156,17 +177,17 @@ function ResponsiveAppBar() {
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}

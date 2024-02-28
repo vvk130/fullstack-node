@@ -1,15 +1,25 @@
-import Button from '@mui/material/Button';
-import backgroundImage from '../assets/images/mens-white-hoodie-removebg-preview.png';
-import './css/HeaderComponent.css'; 
+import Button from "@mui/material/Button";
+import backgroundImage from "../assets/images/mens-white-hoodie-removebg-preview.png";
+import "./css/HeaderComponent.css";
 
 const HeaderComponent = () => {
   return (
     <div className="header-container">
       <div className="header-content">
         <h1>Check out our new hoodie by Shadowflow</h1>
-        <Button variant="outlined" style={{ borderColor: '#2274A5', color: '#2274A5' }} href="https://trend-flare.onrender.com/products/16">Read more</Button>
+        <Button
+          variant="outlined"
+          style={{ borderColor: "#2274A5", color: "#2274A5" }}
+          href="https://trend-flare.onrender.com/products/16"
+        >
+          Read more
+        </Button>
       </div>
-      <img src={backgroundImage} alt="New hoodie by Shadowflow" className="header-img" />
+      <img
+        src={backgroundImage}
+        alt="New hoodie by Shadowflow"
+        className="header-img"
+      />
     </div>
   );
 };

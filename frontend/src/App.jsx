@@ -1,86 +1,84 @@
-import './App.css'
-import AppBarResMenu from './components/AppBarResMenu'
-import CampaignBar from './components/CampaignBar';
-import Footer from './components/Footer';
-import FooterEmailSignUp from './components/FooterEmailSignUp';
+import "./App.css";
+import AppBarResMenu from "./components/AppBarResMenu";
+import CampaignBar from "./components/CampaignBar";
+import Footer from "./components/Footer";
+import FooterEmailSignUp from "./components/FooterEmailSignUp";
 // import HeaderComponent from './components/HeaderComponent';
-import HeaderVideo from './components/HeaderVideo';
+import HeaderVideo from "./components/HeaderVideo";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./routing/router";
-import Axios from 'axios';
-import { useState, useEffect } from 'react';
+import Axios from "axios";
+import { useState, useEffect } from "react";
 
 function App() {
-
   const [data, setData] = useState(null);
   const [women, setWomen] = useState(null);
   const [men, setMen] = useState(null);
   const [kids, setChildren] = useState(null);
 
-  const getData = async() => {
-    try{
+  const getData = async () => {
+    try {
       const response = await Axios.get("/api/getproducts");
       setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  }
-  useEffect(()=> {
+  };
+  useEffect(() => {
     getData();
   }, []);
 
-  const getWomen = async() => {
-    try{
+  const getWomen = async () => {
+    try {
       const response = await Axios.get("/api/getproducts/women");
       setWomen(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  }
-  useEffect(()=> {
+  };
+  useEffect(() => {
     getWomen();
   }, []);
 
-  
-  const getMen = async() => {
-    try{
+  const getMen = async () => {
+    try {
       const response = await Axios.get("/api/getproducts/men");
       setMen(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  }
-  useEffect(()=> {
+  };
+  useEffect(() => {
     getMen();
   }, []);
 
-  const getChildren = async() => {
-    try{
+  const getChildren = async () => {
+    try {
       const response = await Axios.get("/api/getproducts/children");
       setChildren(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
-  }
-  useEffect(()=> {
+  };
+  useEffect(() => {
     getChildren();
   }, []);
 
   return (
-      <div className="app">
+    <div className="app">
       <AppBarResMenu />
-      <HeaderVideo /> 
+      <HeaderVideo />
       <CampaignBar />
       {/* <HeaderComponent />  */}
       <div className="container">
-      <BrowserRouter>
-      <Router data={data} women={women} kids={kids} men={men}/>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Router data={data} women={women} kids={kids} men={men} />
+        </BrowserRouter>
       </div>
-      <FooterEmailSignUp/>
-      <Footer/>
-      </div>
-  )
+      <FooterEmailSignUp />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
