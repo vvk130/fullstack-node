@@ -12,7 +12,7 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ## How to run project locally
 
-Clone the reporitory
+Clone the repository
 ```
 git clone https://github.com/vvk130/fullstack-node.git
 ```
