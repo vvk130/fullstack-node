@@ -14,7 +14,7 @@ https://github.com/vvk130/fullstack-node/assets/80620628/fbeff452-b3f3-4253-87ba
 
 ## How to run project locally
 
-**bold**Database connection does not work locally, therefore the application does not run locally.**bold**
+**Database connection does not work locally, therefore the application does not run locally.**
 
 Clone the repository
 ```
