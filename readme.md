@@ -4,9 +4,19 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 
 ## List of Contents
 
+- How to run project locally 
 - [Technologies Used](#technologies-used)
 - [Database structure](#database-structure)
+- Folder Structure
 - [List of HTTPS Methods](#list-of-https-methods)
+
+## How to run project locally
+
+```
+function test() {
+  console.log("This code will have a copy button to the right of it");
+}
+```
 
 ## Technologies Used
 
@@ -53,14 +63,7 @@ See the project live: [https://trend-flare.onrender.com/](https://trend-flare.on
 - **PUT /users/{id}**: Update an existing user.
 - ~**DELETE /users/{id}**: Delete a user by their ID.~
 
-## Self-evaluation, things project is missing, TODOs
+## Folder Structure
 
-- Project was not SEO optimized, as it was not the main goal of this project. (url names, links structure, sitemap, metadescriptions, robots.txt, possibly soft 404 (?)) 
-- Some components that were used only one time, and were still placed in the components folder (could be placed in pages folder)
-- Components could have been built to be more reusable 
-- API call code was too verbose
-- Files could have todo in them if they were not finished, to ensure better control over the tasks in progress
-- CSS was sometimes placed in a file, sometimes as style={{}}. More unified approach would have been great.
-- Testing was missing from the projects
-- No caching in the project
-+ Error handling was on place
+#todo
+
