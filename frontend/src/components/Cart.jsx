@@ -2,8 +2,8 @@ import CartItem from "./CartItem";
 import "./css/Cart.css";
 
 function ShoppingCart() {
-  const itemsInCart = 1;
-  const total = 32;
+  const itemsInCart = 50;
+  const shipping = 32;
 
   return (
     <>
@@ -12,7 +12,12 @@ function ShoppingCart() {
       <CartItem />
       <CartItem />
       <p>Items in Cart: {itemsInCart}</p>
-      <p>Total sum: {total}€</p>
+      <p>Shipping cost: {itemsInCart >= 49.95 ? "0" : shipping}</p>
+      <span className="small-text">
+        Free shipping for deliveries over 49.95€
+      </span>
+      <hr className="hrdashed" />
+      <p>Total sum: {itemsInCart + shipping}€</p>
     </>
   );
 }

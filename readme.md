@@ -15,6 +15,7 @@ https://github.com/vvk130/fullstack-node/assets/80620628/fbeff452-b3f3-4253-87ba
 ## How to clone project
 
 Clone the repository
+
 ```
 git clone https://github.com/vvk130/fullstack-node.git
 ```
@@ -34,45 +35,35 @@ git clone https://github.com/vvk130/fullstack-node.git
 ## List of HTTPS Methods
 
 ### Products
-- **GET /products**: Retrieve a list of all products.
-- **GET /products/{id}**: Retrieve a specific product by its ID.
-- **POST /products**: Create a new product.
-- **PUT /products/{id}**: Update an existing product.
-- **DELETE /products/{id}**: Delete a product by its ID.
+
+- **GET /api/getproducts**: Retrieve a list of all products.
+- **GET /api/getproducts/{id}**: Retrieve a specific product by its ID.
+- **GET /api/getbrands/{brand}**: Retrieve a list of products by brandname.
 
 ### Orders
+
 - **GET /orders**: Retrieve a list of all orders.
 - **GET /orders/{id}**: Retrieve a specific order by its ID.
-- **POST /orders**: Create a new order.
-- **PUT /orders/{id}**: Update an existing order.
-- **DELETE /orders/{id}**: Delete an order by its ID.
 
 ### Discounts
+
 - **GET /api/getdiscounts**: Retrieve a list of all products with discounts.
 
-### Shopping Carts
-- **GET /carts**: Retrieve a list of all shopping carts.
-- **GET /carts/{id}**: Retrieve a specific shopping cart by its ID.
-- **POST /carts**: Create a new shopping cart.
-- **PUT /carts/{id}**: Update an existing shopping cart.
-- **DELETE /carts/{id}**: Delete a shopping cart by its ID.
-
 ### Users
+
 - **GET /users**: Retrieve a list of all users.
-- **GET /users/{id}**: Retrieve a specific user by their ID.
-- **POST /users**: Create a new user.
-- **PUT /users/{id}**: Update an existing user.
-- ~**DELETE /users/{id}**: Delete a user by their ID.~
 
 ## Folder Structure
 
 ### Backend:
+
 - **Models**: database models
 - **Utils**: commonly used functions
 - **Dist**: build frontend and assets
 - **Api**: api endpoints
 
-### Frontend/src: 
+### Frontend/src:
+
 - **Assets**
 - **Components**
 - **Pages**
