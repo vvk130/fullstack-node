@@ -14,6 +14,8 @@ https://github.com/vvk130/fullstack-node/assets/80620628/fbeff452-b3f3-4253-87ba
 
 ## How to run project locally
 
+**bold**Database connection does not work locally, therefore the application does not run locally.**bold**
+
 Clone the repository
 ```
 git clone https://github.com/vvk130/fullstack-node.git
@@ -23,7 +25,6 @@ Run nodemon:
 ```
 nodemon
 ```
-The application should run on port 3005
 
 ## Technologies Used
 
