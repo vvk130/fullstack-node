@@ -6,24 +6,17 @@ https://github.com/vvk130/fullstack-node/assets/80620628/fbeff452-b3f3-4253-87ba
 
 ## List of Contents
 
-- [How to run project locally](#how-to-run-project-locally)
+- [How to clone the project](#how-to-clone-project)
 - [Technologies Used](#technologies-used)
 - [Database structure](#database-structure)
 - [Folder Structure](#folder-structure)
 - [List of HTTPS Methods](#list-of-https-methods)
 
-## How to run project locally
-
-**Database connection does not work locally, therefore the application does not run locally.**
+## How to clone project
 
 Clone the repository
 ```
 git clone https://github.com/vvk130/fullstack-node.git
-```
-
-Run nodemon:
-```
-nodemon
 ```
 
 ## Technologies Used
