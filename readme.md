@@ -2,6 +2,8 @@
 
 See the project live: [https://trend-flare.onrender.com/](https://trend-flare.onrender.com/)
 
+https://github.com/vvk130/fullstack-node/assets/80620628/fbeff452-b3f3-4253-87ba-25df113cba8d
+
 ## List of Contents
 
 - How to run project locally 
