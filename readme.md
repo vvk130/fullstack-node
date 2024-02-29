@@ -1,5 +1,7 @@
 # Full Stack Ecommerce Project
 
+Full Stack Ecommerce Project in development
+
 See the project live: [https://trend-flare.onrender.com/](https://trend-flare.onrender.com/)
 
 https://github.com/vvk130/fullstack-node/assets/80620628/fbeff452-b3f3-4253-87ba-25df113cba8d
