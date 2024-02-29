@@ -2,7 +2,7 @@
 
 See the project live: [https://trend-flare.onrender.com/](https://trend-flare.onrender.com/)
 
-https://github.com/vvk130/fullstack-node/assets/80620628/fbeff452-b3f3-4253-87ba-25df113cba8d
+https://github.com/vvk130/fullstack-node/assets/80620628/89fb7985-37d9-4c45-a0a4-ec4ade139727
 
 ## List of Contents
 
