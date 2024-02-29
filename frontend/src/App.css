@@ -38,7 +38,7 @@ a:hover {
   font-size: 0.8rem;
 }
 
-button{
+.button-style {
   color: white;
   background-color: black; 
   border-radius: 0.2rem;

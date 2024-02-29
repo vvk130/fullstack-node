@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import Axios from "axios";
 import { useEffect, useState } from "react";
-import Typography from "@mui/material/Typography";
 import "../components/css/ProductDetail.css";
 import SizeChart from "../components/SizeChart";
 import SimpleDialog from "../components/SimpleDialog";
 import ProductCarousel from "../components/ProductCarousel";
 import showDiscountedPrice from "../utils/showDiscountedPrice";
+import { Typography } from "@mui/material";
 
 const ProductDetail = ({ products }) => {
   const { id: productId } = useParams();
@@ -15,9 +15,7 @@ const ProductDetail = ({ products }) => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await Axios.get(
-          `/api/getproducts/${Number(productId)}`
-        );
+        const response = await Axios.get(`/api/getproducts/${productId}`);
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -63,6 +61,7 @@ const ProductDetail = ({ products }) => {
                   marginLeft: "1rem",
                 }}
                 message="Added to cart"
+                item={data}
               />
               <hr className="hrdashed" />
               <p>{data.color.charAt(0).toUpperCase() + data.color.slice(1)}</p>

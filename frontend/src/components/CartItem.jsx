@@ -1,65 +1,95 @@
-import { Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Button } from "@mui/material";
 import "./css/Cart.css";
 import showDiscountedPrice from "../utils/showDiscountedPrice";
+import shoppingCartFunctions from "../utils/shoppingCartFunctions.js";
+import { useEffect, useState } from "react";
 
-function CartItem() {
-  const productName = "Nelly Pants";
-  const price = 40;
-  const discount = 0.2;
-  const productSku = "SK0000eueu";
-  const count = 2;
+function CartItem({ product, count }) {
+  const [cartCount, setCartCount] = useState(count);
+
+  useEffect(() => {
+    const localStorageCount = shoppingCartFunctions.getCartItemAmount(product);
+    setCartCount(localStorageCount);
+  }, [product, count]);
+
+  const handleAdd = () => {
+    setCartCount(cartCount + 1);
+    shoppingCartFunctions.addToCart(product);
+  };
+
+  const handleRemove = () => {
+    setCartCount(cartCount - 1);
+    shoppingCartFunctions.removeOneFromCart(product);
+  };
+
+  const handleRemoveCompletely = () => {
+    setCartCount(0);
+    shoppingCartFunctions.removeCompletelyFromCart(product);
+  };
 
   return (
     <>
-      <div className="cart-item-container">
-        <div className="cart-item-img-container">
-          <img
-            className="cart-img"
-            src="https://trend-flare.onrender.com/assets/mens-black-pants.jpg"
-            alt={productName}
-          />
-        </div>
-        <div className="cart-item-details">
-          <Typography gutterBottom variant="h6" component="div">
-            {productSku} {productName}
-          </Typography>
-          <Typography gutterBottom variant="h6" component="div">
-            <Button
-              style={{
-                backgroundColor: "black",
-                color: "white",
-                marginRight: "1rem",
-              }}
-            >
-              -
-            </Button>
-            {count}
-            <Button
-              style={{
-                backgroundColor: "black",
-                color: "white",
-                marginLeft: "1rem",
-              }}
-            >
-              +
-            </Button>
-          </Typography>
-          <Typography
-            gutterBottom
-            variant="h6"
-            component="div"
-            color={discount ? "red" : "inherit"}
-          >
-            {discount ? showDiscountedPrice(price, discount) : `${price}€`}
-          </Typography>
-          <div className="cart-item-delete">
-            <DeleteIcon />
+      {cartCount > 0 && (
+        <>
+          <div className="cart-item-container">
+            <div className="cart-item-img-container">
+              <img
+                className="cart-img"
+                src={`https://trend-flare.onrender.com/assets/${product.image_url}`}
+                alt={product.name}
+              />
+            </div>
+            <div className="cart-item-details">
+              <Typography gutterBottom variant="h6" component="div">
+                {product.sku}{" "}
+                <a href={`/products/${product.id}`}>{product.name}</a>
+              </Typography>
+              <Typography gutterBottom variant="h6" component="div">
+                <Button
+                  onClick={handleRemove}
+                  disabled={cartCount <= 0}
+                  style={{
+                    backgroundColor: cartCount <= 0 ? "grey" : "black",
+                    color: "white",
+                    marginRight: "1rem",
+                  }}
+                >
+                  -
+                </Button>
+                {cartCount}
+                <Button
+                  onClick={handleAdd}
+                  style={{
+                    backgroundColor: "black",
+                    color: "white",
+                    marginLeft: "1rem",
+                  }}
+                >
+                  +
+                </Button>
+              </Typography>
+              <Typography
+                gutterBottom
+                variant="h6"
+                component="div"
+                color={product.discount ? "red" : "inherit"}
+              >
+                {product.discount
+                  ? showDiscountedPrice(product.price, product.discount)
+                  : `${product.price}€`}
+              </Typography>
+              <div className="cart-item-delete">
+                <IconButton onClick={handleRemoveCompletely}>
+                  <DeleteIcon />
+                </IconButton>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <hr className="hrdashed" />
+          <hr className="hrdashed" />
+        </>
+      )}
     </>
   );
 }

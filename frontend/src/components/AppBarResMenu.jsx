@@ -35,8 +35,6 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
-  const totalSum = 1000;
-
   return (
     <AppBar
       style={{
@@ -74,7 +72,6 @@ function ResponsiveAppBar() {
             </Typography>
           </Box>
 
-          {/* Search, Heart, and Chart Icons for Larger Screens */}
           <Box
             sx={{
               flexGrow: 0,
@@ -82,18 +79,15 @@ function ResponsiveAppBar() {
               justifyContent: "flex-end",
             }}
           >
-            <Tooltip title={`Total: ${totalSum}`}>
-              <IconButton
-                size="large"
-                color="inherit"
-                sx={{ mr: 1 }}
-                component="a"
-                href="/Cart"
-              >
-                <ShoppingCartIcon />
-              </IconButton>
-            </Tooltip>
-            {/* End of Search, Heart, and Chart Icons */}
+            <IconButton
+              size="large"
+              color="inherit"
+              sx={{ mr: 1 }}
+              component="a"
+              href="/Cart"
+            >
+              <ShoppingCartIcon />
+            </IconButton>
           </Box>
           <Box
             sx={{

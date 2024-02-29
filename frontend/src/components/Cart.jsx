@@ -1,23 +1,45 @@
 import CartItem from "./CartItem";
 import "./css/Cart.css";
+import shoppingCartFunctions from "../utils/shoppingCartFunctions.js";
+// import { useEffect, useState } from "react";
+import { Button } from "@mui/material";
 
 function ShoppingCart() {
-  const itemsInCart = 50;
-  const shipping = 32;
+  const myCart = JSON.parse(localStorage.getItem("cart"));
 
   return (
     <>
-      <p></p>
-      <hr className="hrdashed" />
-      <CartItem />
-      <CartItem />
-      <p>Items in Cart: {itemsInCart}</p>
-      <p>Shipping cost: {itemsInCart >= 49.95 ? "0" : shipping}</p>
-      <span className="small-text">
-        Free shipping for deliveries over 49.95€
-      </span>
-      <hr className="hrdashed" />
-      <p>Total sum: {itemsInCart + shipping}€</p>
+      {myCart && myCart.length > 0 ? (
+        <>
+          <p></p>
+          <hr className="hrdashed" />
+          {myCart.map((item) => (
+            <CartItem
+              key={item.product.id}
+              product={item.product}
+              count={item.amount}
+            />
+          ))}
+          <span className="small-text">
+            Free shipping for deliveries over 49.95€
+          </span>
+          <hr className="hrdashed" />
+          <Button
+            style={{
+              backgroundColor: "black",
+              color: "white",
+              marginBottom: "1rem",
+            }}
+            onClick={shoppingCartFunctions.emptyShoppingCart}
+            component="a"
+            href="/checkout"
+          >
+            Confirm your order
+          </Button>
+        </>
+      ) : (
+        <p>Your cart is empty</p>
+      )}
     </>
   );
 }

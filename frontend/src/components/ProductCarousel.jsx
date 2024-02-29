@@ -18,16 +18,7 @@ const ProductCarousel = ({ products }) => {
                   <Skeleton variant="rectangular" width={300} height={450} />
                 }
               >
-                <ProductCard
-                  productName={product.name}
-                  price={product.price}
-                  id={product.id}
-                  imageUrl={product.image_url}
-                  brand={product.brand}
-                  discount={product.discount}
-                  stock={product.stock}
-                  style={{ width: "7em" }}
-                />
+                <ProductCard product={product} style={{ width: "7em" }} />
               </Suspense>
             ))}
         </div>

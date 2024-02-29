@@ -3,14 +3,17 @@ import AppBarResMenu from "./components/AppBarResMenu";
 import CampaignBar from "./components/CampaignBar";
 import Footer from "./components/Footer";
 import FooterEmailSignUp from "./components/FooterEmailSignUp";
-// import HeaderComponent from './components/HeaderComponent';
-import HeaderVideo from "./components/HeaderVideo";
+import HeaderComponent from "./components/HeaderComponent";
+// import HeaderVideo from "./components/HeaderVideo";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./routing/router";
 import Axios from "axios";
 import { useState, useEffect } from "react";
+import shoppingCartFunctions from "./utils/shoppingCartFunctions.js";
 
 function App() {
+  shoppingCartFunctions.initializeCart();
+
   const [data, setData] = useState(null);
   const [women, setWomen] = useState(null);
   const [men, setMen] = useState(null);
@@ -67,9 +70,9 @@ function App() {
   return (
     <div className="app">
       <AppBarResMenu />
-      <HeaderVideo />
+      {/* <HeaderVideo /> */}
+      <HeaderComponent />
       <CampaignBar />
-      {/* <HeaderComponent />  */}
       <div className="container">
         <BrowserRouter>
           <Router data={data} women={women} kids={kids} men={men} />
