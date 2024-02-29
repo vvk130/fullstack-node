@@ -12,7 +12,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-const pages = ["Home", "Men", "Women", "Children", "Cart"];
+const pages = ["Home", "men", "women", "children", "Cart"];
 const settings = ["Profile", "Logout"];
 
 function ResponsiveAppBar() {
@@ -126,7 +126,11 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" component="a" href={`${page}`}>
+                  <Typography
+                    textAlign="center"
+                    component="a"
+                    href={`https://trend-flare.onrender.com/${page}`}
+                  >
                     {page}
                   </Typography>
                 </MenuItem>
@@ -148,7 +152,7 @@ function ResponsiveAppBar() {
                   <Typography
                     key="{page}"
                     component="a"
-                    href={`/${page}`}
+                    href={`https://trend-flare.onrender.com/${page}`}
                     onClick={handleCloseNavMenu}
                     sx={{
                       my: 2,
@@ -163,7 +167,6 @@ function ResponsiveAppBar() {
             )}
           </Box>
 
-          {/* User Avatar and Settings Menu */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
