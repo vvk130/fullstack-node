@@ -61,7 +61,7 @@ const ProductDetail = ({ products }) => {
                   marginLeft: "1rem",
                 }}
                 message="Added to cart"
-                item={data}
+                product={data}
               />
               <hr className="hrdashed" />
               <p>{data.color.charAt(0).toUpperCase() + data.color.slice(1)}</p>
