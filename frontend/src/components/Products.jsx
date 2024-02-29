@@ -12,7 +12,7 @@ const Products = ({ title, description, products }) => {
         <div style={{ paddingBottom: "1rem" }}></div>
         <div className="grid">
           {products &&
-            products.map((product) => (
+            products.slice(0, 12).map((product) => (
               <Suspense
                 key={product.id}
                 fallback={
