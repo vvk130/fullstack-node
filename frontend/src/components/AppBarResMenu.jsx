@@ -159,6 +159,7 @@ function ResponsiveAppBar() {
                       color: "black",
                       display: "block",
                       paddingRight: "1rem",
+                      textTransform: "uppercase",
                     }}
                   >
                     {page}
