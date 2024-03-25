@@ -7,6 +7,7 @@ import SimpleDialog from "./SimpleDialog";
 import "./css/ProductCard.css";
 import { Button } from "@mui/material";
 import showDiscountedPrice from "../utils/showDiscountedPrice";
+import url from "../utils/showDiscountedPrice";
 
 export default function ActionAreaCard({ product }) {
   return (
@@ -17,7 +18,7 @@ export default function ActionAreaCard({ product }) {
             <CardMedia
               loading="lazy"
               component="img"
-              src={`https://trend-flare.onrender.com/assets/${product.image_url}`}
+              src={`${url}/${product.image_url}`}
               alt={product.name}
             />
             <CardContent className="cardcontent">

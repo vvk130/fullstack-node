@@ -11,6 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import url from "../utils/showDiscountedPrice";
 
 const pages = ["Home", "men", "women", "children", "Cart"];
 const settings = ["Profile", "Logout"];
@@ -129,7 +130,7 @@ function ResponsiveAppBar() {
                   <Typography
                     textAlign="center"
                     component="a"
-                    href={`https://trend-flare.onrender.com/${page}`}
+                    href={`${url}/${page}`}
                   >
                     {page}
                   </Typography>
@@ -152,7 +153,7 @@ function ResponsiveAppBar() {
                   <Typography
                     key="{page}"
                     component="a"
-                    href={`https://trend-flare.onrender.com/${page}`}
+                    href={`${url}/${page}`}
                     onClick={handleCloseNavMenu}
                     sx={{
                       my: 2,
