@@ -1,6 +1,7 @@
 import Button from "@mui/material/Button";
 import backgroundImage from "../assets/images/mens-white-hoodie-removebg-preview.png";
 import "./css/HeaderComponent.css";
+import url from "../utils/showDiscountedPrice";
 
 const HeaderComponent = () => {
   return (
@@ -10,7 +11,7 @@ const HeaderComponent = () => {
         <Button
           variant="outlined"
           style={{ borderColor: "#2274A5", color: "#2274A5" }}
-          href="https://trend-flare.onrender.com/products/16"
+          href={`${url}/products/16`}
         >
           Read more
         </Button>
