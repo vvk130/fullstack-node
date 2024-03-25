@@ -11,7 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import url from "../utils/showDiscountedPrice";
+import url from "../utils/url";
 
 const pages = ["Home", "men", "women", "children", "Cart"];
 const settings = ["Profile", "Logout"];

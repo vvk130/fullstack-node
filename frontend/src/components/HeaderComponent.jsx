@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import backgroundImage from "../assets/images/mens-white-hoodie-removebg-preview.png";
 import "./css/HeaderComponent.css";
-import url from "../utils/showDiscountedPrice";
+import url from "../utils/url";
 
 const HeaderComponent = () => {
   return (

@@ -7,7 +7,7 @@ import SimpleDialog from "./SimpleDialog";
 import "./css/ProductCard.css";
 import { Button } from "@mui/material";
 import showDiscountedPrice from "../utils/showDiscountedPrice";
-import url from "../utils/showDiscountedPrice";
+import url from "../utils/url";
 
 export default function ActionAreaCard({ product }) {
   return (

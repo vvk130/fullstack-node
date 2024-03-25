@@ -1,1 +1,3 @@
-export const url = "https://trendflare-ecommerce.netlify.app/";
+const url = "https://trendflare-ecommerce.netlify.app";
+
+export default url;
