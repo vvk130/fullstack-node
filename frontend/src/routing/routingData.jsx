@@ -12,74 +12,110 @@ import Brands from "../pages/Brands";
 const routingData = (data, women, men, kids) => [
   {
     path: "/",
-    element: <Products title="All products" description="New and innovative clothing for everyone" products={data}/>,
-    title: "Home"
+    element: (
+      <Products
+        title="All products"
+        description="New and innovative clothing for everyone"
+        products={data}
+      />
+    ),
+    title: "Home",
   },
   {
-    path: window.location.pathname === "/" ? "/" : "/Home",
-    element: <Products title="All products" description="New and innovative clothing for everyone" products={data} />,
-    title: "Home"
-  },  
+    path: "/",
+    element: (
+      <Products
+        title="All products"
+        description="New and innovative clothing for everyone"
+        products={data}
+      />
+    ),
+    title: "Home",
+  },
   {
-    path: "cart",
+    path: "/cart",
     element: <Cart />,
-    title: "cart"
+    title: "cart",
   },
   {
-    path: "Women",
-    element: <Products title="Women's clothing" description="New and innovative clothing for women" products={women} />,
-    title: "Women's clothing"
+    path: "/Women",
+    element: (
+      <Products
+        title="Women's clothing"
+        description="New and innovative clothing for women"
+        products={women}
+      />
+    ),
+    title: "Women's clothing",
   },
   {
-    path: "Men",
-    element: <Products title="Men's clothing" description="New and innovative clothing for men" products={men} />,
-    title: "Men's clothing"
+    path: "/Men",
+    element: (
+      <Products
+        title="Men's clothing"
+        description="New and innovative clothing for men"
+        products={men}
+      />
+    ),
+    title: "Men's clothing",
   },
   {
-    path: "Children",
-    element: <Products title="Children's clothing" description="New and innovative clothing for children" products={kids} />,
-    title: "Children's clothing"
+    path: "/Children",
+    element: (
+      <Products
+        title="Children's clothing"
+        description="New and innovative clothing for children"
+        products={kids}
+      />
+    ),
+    title: "Children's clothing",
   },
   {
-    path: "login",
+    path: "/login",
     element: <Login />,
-    title: "login"
+    title: "login",
   },
   {
-    path: "search",
+    path: "/search",
     element: <Search />,
-    title: "seach"
+    title: "seach",
   },
   {
-    path: "checkout",
+    path: "/checkout",
     element: <CheckOut />,
-    title: "checkout"
+    title: "checkout",
   },
   {
-    path: "signin",
+    path: "/signin",
     element: <SignIn />,
-    title: "signin"
+    title: "signin",
   },
   {
-    path: "profile",
+    path: "/profile",
     element: <Profile />,
-    title: "profile"
+    title: "profile",
   },
   {
     path: "/products/:id",
-    element: <ProductDetail products={data}/>,
-    title: "productDetail"
+    element: <ProductDetail products={data} />,
+    title: "productDetail",
   },
   {
     path: "/brands/:brand",
-    element: <Brands title="Styles by Brand" description="Find clothes from your favorite brand" products={data} />,
-    title: "Styles by brand"
+    element: (
+      <Brands
+        title="Styles by Brand"
+        description="Find clothes from your favorite brand"
+        products={data}
+      />
+    ),
+    title: "Styles by brand",
   },
   {
     path: "*",
     element: <NotFound />,
-    title: "Not Found"
-  }
+    title: "Not Found",
+  },
 ];
 
 export default routingData;
