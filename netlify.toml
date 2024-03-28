@@ -1,2 +1,4 @@
 [build]
-  base = "client"
+  base = "frontend/"
+
+  publish = "dist/"
